@@ -13,14 +13,14 @@ class Home extends Component {
             <div className="left-menu">
               <i className="fa fa-bars fa-lg" aria-hidden="true" />
             </div>
-            <div className="blog-title">
+            <div className="title">
               <span>How to Geek</span>
             </div>
             <div className="author">
               Pablo Bello
               <div className="underline">_</div>
             </div>
-            <div className="blog-quotes">
+            <div className="quotes">
               <div>"Talk is cheap. Show me the code." </div>
               <div>- Linus Torvalds</div>
             </div>

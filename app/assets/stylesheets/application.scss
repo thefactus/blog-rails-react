@@ -44,35 +44,42 @@ a {
   grid-template-columns: 50% 50%;
   grid-template-rows: 60% 20% 20%;
   grid-template-areas:
-    "left-menu blog-title"
+    "left-menu sidebar-title"
     "author ."
-    "blog-quotes blog-quotes";
+    "quotes quotes";
 
   .fa {
     color: #f1f4ff;
   }
-}
 
-.author {
-  grid-area: author;
-  color: #ffe118;
+  .title {
+    font-family: "Libre Baskerville", "georgia", serif;
+    grid-area: sidebar-title;
+    justify-self: end;
+    color: #f1f4ff;
+    font-size: 20px;
+  }
 
-  .underline {
-    font-size: 40px;
-    margin-top: -30px;
+  .author {
+    grid-area: author;
+    color: #ffe118;
+
+    .underline {
+      font-size: 40px;
+      margin-top: -30px;
+    }
+  }
+
+  .left-menu {
+    grid-area: left-menu;
   }
 }
 
-.left-menu {
-  grid-area: left-menu;
-}
-
-.blog-title {
-  font-family: "Libre Baskerville", "georgia", serif;
-  grid-area: blog-title;
-  justify-self: end;
-  color: #f1f4ff;
-  font-size: 20px;
+.content {
+  grid-area: content;
+  position: relative;
+  background-color: #f1f4ff;
+  padding: 35px 70px 35px 70px;
 }
 
 .blog-post-title {
@@ -92,8 +99,8 @@ a {
   text-align: justify;
 }
 
-.blog-quotes {
-  grid-area: blog-quotes;
+.quotes {
+  grid-area: quotes;
   font-family: "Libre Baskerville", "georgia", serif;
   color: #f1f4ff;
   font-size: 20px;
@@ -101,13 +108,6 @@ a {
 }
 
 .blog-author {
-}
-
-.content {
-  grid-area: content;
-  position: relative;
-  background-color: #f1f4ff;
-  padding: 35px 70px 35px 70px;
 }
 
 .header {

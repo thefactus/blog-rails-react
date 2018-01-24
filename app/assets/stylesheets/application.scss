@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+body {
+  /* margin: 40px; */
+  /* background-color: #e9ebee; */
+  margin: 0px;
+}
+
+a {
+  color: #46529d;
+}
+
+.home-wrapper {
+  display: grid;
+  /* grid-gap: 10px; */
+  grid-template-columns: 15% 15% 70%;
+  /* grid-template-rows: auto; */
+  grid-template-areas:
+    "sidebar sidebar content"
+    "sidebar sidebar content";
+  height: 100vh; /* fill the vertical */
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 35px 70px 35px 35px;
+  background-color: #46529d;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "left-menu blog-title";
+
+  .fa {
+    color: #f1f4ff;
+  }
+}
+
+.left-menu {
+  grid-area: left-menu;
+}
+
+.blog-title {
+  font-family: "Libre Baskerville", "georgia", serif;
+  grid-area: blog-title;
+  justify-self: end;
+  color: #f1f4ff;
+  font-size: 20px;
+}
+
+.blog-post-title {
+  font-family: "Libre Baskerville", "georgia", serif;
+  font-size: 20px;
+  color: #46529d;
+}
+
+.blog-post-subtitle {
+}
+
+.blog-post-description {
+  font-family: "Libre Baskerville", "georgia", serif;
+  font-size: 14px;
+  color: #a1a6c7;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.blog-description {
+}
+
+.blog-author {
+}
+
+.content {
+  grid-area: content;
+  position: relative;
+  background-color: #f1f4ff;
+  padding: 35px 70px 35px 70px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.title {
+  /* text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 200%; */
+}
+
+.blog-post-list-item-title {
+  font-family: "Libre Baskerville", "georgia", serif;
+  font-size: 1.5em;
+  /* padding-bottom: 10px; */
+}
+
+.blog-post-list-item-subtitle {
+  font-family: "Libre Baskerville", "georgia", serif;
+  font-size: 0.9em;
+}

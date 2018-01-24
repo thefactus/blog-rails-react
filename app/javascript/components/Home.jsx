@@ -16,6 +16,14 @@ class Home extends Component {
             <div className="blog-title">
               <span>How to Geek</span>
             </div>
+            <div className="author">
+              Pablo Bello
+              <div className="underline">_</div>
+            </div>
+            <div className="blog-quotes">
+              <div>"Talk is cheap. Show me the code." </div>
+              <div>- Linus Torvalds</div>
+            </div>
           </div>
           <div className="content">
             <div className="blog-post-title">

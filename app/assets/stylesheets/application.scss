@@ -38,14 +38,28 @@ a {
 
 .sidebar {
   grid-area: sidebar;
-  padding: 35px 70px 35px 35px;
+  padding: 35px 35px 35px 35px;
   background-color: #46529d;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-areas: "left-menu blog-title";
+  grid-template-rows: 60% 20% 20%;
+  grid-template-areas:
+    "left-menu blog-title"
+    "author ."
+    "blog-quotes blog-quotes";
 
   .fa {
     color: #f1f4ff;
+  }
+}
+
+.author {
+  grid-area: author;
+  color: #ffe118;
+
+  .underline {
+    font-size: 40px;
+    margin-top: -30px;
   }
 }
 
@@ -78,7 +92,12 @@ a {
   text-align: justify;
 }
 
-.blog-description {
+.blog-quotes {
+  grid-area: blog-quotes;
+  font-family: "Libre Baskerville", "georgia", serif;
+  color: #f1f4ff;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .blog-author {

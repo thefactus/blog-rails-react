@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  resources :posts
+  namespace :admin do
+    get '', to: 'dashboard#index', as: '/'
+    resources :posts
+  end
 end

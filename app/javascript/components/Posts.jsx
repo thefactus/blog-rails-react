@@ -16,7 +16,7 @@ class Posts extends Component {
     axios
       .get("/admin/posts.json")
       .then(function(response) {
-        _this.setState({ posts: response.data });
+        _this.setState({ posts: response.data.data });
       })
       .catch(function(error) {
         console.log(error);

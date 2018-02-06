@@ -35,16 +35,18 @@ function SimpleTable(props) {
   const data = [];
 
   props.posts.map(post => {
-    data.push(
-      createData(
-        post.id,
-        post.title,
-        post.body,
-        post.created_at,
-        post.updated_at,
-        ""
-      )
-    );
+    if (post.type == "post") {
+      data.push(
+        createData(
+          post.id,
+          post.attributes.title,
+          post.attributes.body,
+          post.attributes.created_at,
+          post.attributes.updated_at,
+          ""
+        )
+      );
+    }
   });
 
   return (

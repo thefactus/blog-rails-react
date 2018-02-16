@@ -16,8 +16,6 @@
  */
 
 body {
-  /* margin: 40px; */
-  /* background-color: #e9ebee; */
   margin: 0px;
 }
 
@@ -27,17 +25,16 @@ a {
 
 .home-wrapper {
   display: grid;
-  /* grid-gap: 10px; */
-  grid-template-columns: 15% 15% 70%;
+  grid-template-columns: repeat(12, 1fr);
   /* grid-template-rows: auto; */
   grid-template-areas:
-    "sidebar sidebar content"
-    "sidebar sidebar content";
+    "s s s c c c c c c c c c"
+    "s s s c c c c c c c c c";
   height: 100vh; /* fill the vertical */
 }
 
 .sidebar {
-  grid-area: sidebar;
+  grid-area: s;
   padding: 35px 35px 35px 35px;
   background-color: #46529d;
   display: grid;
@@ -76,7 +73,7 @@ a {
 }
 
 .content {
-  grid-area: content;
+  grid-area: c;
   position: relative;
   background-color: #f1f4ff;
   padding: 35px 70px 35px 70px;

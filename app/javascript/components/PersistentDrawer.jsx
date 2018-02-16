@@ -200,7 +200,7 @@ class PersistentDrawer extends React.Component {
             <Typography className={classes.title}>
               {this.props.title}
             </Typography>
-            <SimpleTable posts={this.props.posts} />
+            <SimpleTable data={this.props.data} />
           </main>
           {after}
         </div>

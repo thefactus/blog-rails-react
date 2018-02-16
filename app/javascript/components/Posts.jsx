@@ -30,7 +30,7 @@ class Posts extends Component {
   render() {
     return (
       <div>
-        <PersistentDrawer title="Posts" posts={this.state.posts} />
+        <PersistentDrawer title="Posts" data={this.state.posts} />
       </div>
     );
   }

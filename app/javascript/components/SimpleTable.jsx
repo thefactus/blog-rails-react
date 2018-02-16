@@ -34,7 +34,7 @@ function SimpleTable(props) {
 
   const data = [];
 
-  props.posts.map(post => {
+  props.data.map(post => {
     if (post.type == "post") {
       data.push(
         createData(
@@ -68,7 +68,7 @@ function SimpleTable(props) {
               <TableRow key={post.id}>
                 <TableCell>{post.id}</TableCell>
                 <TableCell>{post.title}</TableCell>
-                <TableCell>{post.body}</TableCell>
+                <TableCell numeric>{post.body}</TableCell>
                 <TableCell numeric>{post.created_at}</TableCell>
                 <TableCell numeric>{post.updated_at}</TableCell>
                 <TableCell numeric>{"+"}</TableCell>

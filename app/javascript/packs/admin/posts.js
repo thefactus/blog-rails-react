@@ -11,9 +11,8 @@ import "stylesheets/application";
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "../components/Home";
-import Posts from "../components/Posts";
+import Posts from "../../components/Posts";
 
 document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<Home />, document.getElementById("home"));
+  ReactDOM.render(<Posts />, document.getElementById("posts"));
 });

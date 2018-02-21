@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PersistentDrawer from "./PersistentDrawer";
 import axios from "axios";
+import SimpleTable from "./SimpleTable";
 
 class Posts extends Component {
   constructor(props) {
@@ -28,9 +29,12 @@ class Posts extends Component {
   }
 
   render() {
+    const title = "Posts";
+    const content = <SimpleTable data={this.state.posts} />;
+
     return (
       <div>
-        <PersistentDrawer title="Posts" data={this.state.posts} />
+        <PersistentDrawer title={title} content={content} />
       </div>
     );
   }

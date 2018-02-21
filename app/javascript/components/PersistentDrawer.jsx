@@ -15,7 +15,6 @@ import MenuIcon from "material-ui-icons/Menu";
 import ChevronLeftIcon from "material-ui-icons/ChevronLeft";
 import ChevronRightIcon from "material-ui-icons/ChevronRight";
 import ExitIcon from "material-ui-icons/PowerSettingsNew";
-import SimpleTable from "./SimpleTable";
 
 const drawerWidth = 240;
 
@@ -200,7 +199,7 @@ class PersistentDrawer extends React.Component {
             <Typography className={classes.title}>
               {this.props.title}
             </Typography>
-            <SimpleTable data={this.props.data} />
+            {this.props.content}
           </main>
           {after}
         </div>

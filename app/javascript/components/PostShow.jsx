@@ -18,9 +18,12 @@ class PostShow extends Component {
   }
 
   render() {
+    const title = "Post";
+    const content = "";
+
     return (
       <div>
-        <h1>Post Show</h1>
+        <PersistentDrawer title={title} content={content} />
       </div>
     );
   }

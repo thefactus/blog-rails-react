@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PersistentDrawer from "./PersistentDrawer";
+import Typography from "material-ui/Typography";
 import axios from "axios";
 
 class PostShow extends Component {
@@ -19,7 +20,24 @@ class PostShow extends Component {
 
   render() {
     const title = "Post";
-    const content = "";
+    const content = (
+      <div>
+        <dl>
+          <dt>
+            <Typography>Title</Typography>
+          </dt>
+          <dd>
+            <Typography>Lorem Ipsum</Typography>
+          </dd>
+          <dt>
+            <Typography>Body</Typography>
+          </dt>
+          <dd>
+            <Typography>Lorem Ipsum</Typography>
+          </dd>
+        </dl>
+      </div>
+    );
 
     return (
       <div>

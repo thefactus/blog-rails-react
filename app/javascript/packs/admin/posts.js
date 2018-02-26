@@ -14,5 +14,7 @@ import ReactDOM from "react-dom";
 import Posts from "../../components/Posts";
 
 document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<Posts />, document.getElementById("posts"));
+  const node = document.getElementById("posts_data");
+  const data = JSON.parse(node.getAttribute("data"));
+  ReactDOM.render(<Posts data={data.data} />, document.getElementById("posts"));
 });

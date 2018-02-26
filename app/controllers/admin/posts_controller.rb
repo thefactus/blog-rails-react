@@ -1,11 +1,11 @@
 class Admin::PostsController < AdminController
   def index
-    posts = Post.all
-    json_string = PostSerializer.new(posts).serialized_json
+    @posts = Post.all
+    @posts = PostSerializer.new(@posts).serialized_json
+  end
 
-    respond_to do |format|
-      format.html
-      format.json { render json: json_string }
-    end
+  def show
+    @post = Post.find(params[:id])
+    @post = PostSerializer.new(@post).serialized_json
   end
 end

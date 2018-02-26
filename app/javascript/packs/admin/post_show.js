@@ -11,8 +11,14 @@ import "stylesheets/application";
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Posts from "../../components/PostShow";
+import PostShow from "../../components/PostShow";
 
 document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<Posts />, document.getElementById("post_show"));
+  const node = document.getElementById("post_data");
+  const data = JSON.parse(node.getAttribute("data"));
+
+  ReactDOM.render(
+    <PostShow data={data.data} />,
+    document.getElementById("post_show")
+  );
 });

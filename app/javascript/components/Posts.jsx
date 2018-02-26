@@ -8,20 +8,8 @@ class Posts extends Component {
     super(props);
 
     this.state = {
-      posts: []
+      posts: this.props.data
     };
-  }
-
-  componentDidMount() {
-    let _this = this;
-    axios
-      .get("/admin/posts.json")
-      .then(function(response) {
-        _this.setState({ posts: response.data.data });
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
   }
 
   showSettings(event) {

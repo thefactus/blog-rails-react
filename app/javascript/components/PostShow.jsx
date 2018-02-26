@@ -6,16 +6,6 @@ import axios from "axios";
 class PostShow extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      posts: []
-    };
-  }
-
-  componentDidMount() {}
-
-  showSettings(event) {
-    event.preventDefault();
   }
 
   render() {
@@ -27,13 +17,25 @@ class PostShow extends Component {
             <Typography>Title</Typography>
           </dt>
           <dd>
-            <Typography>Lorem Ipsum</Typography>
+            <Typography>{this.props.data.attributes.title}</Typography>
           </dd>
           <dt>
             <Typography>Body</Typography>
           </dt>
           <dd>
-            <Typography>Lorem Ipsum</Typography>
+            <Typography>{this.props.data.attributes.body}</Typography>
+          </dd>
+          <dt>
+            <Typography>Created at</Typography>
+          </dt>
+          <dd>
+            <Typography>{this.props.data.attributes.created_at}</Typography>
+          </dd>
+          <dt>
+            <Typography>Updated at</Typography>
+          </dt>
+          <dd>
+            <Typography>{this.props.data.attributes.updated_at}</Typography>
           </dd>
         </dl>
       </div>

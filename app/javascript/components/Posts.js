@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PersistentDrawer from "./PersistentDrawer";
+import AppDrawer from "./AppDrawer";
 import axios from "axios";
 import SimpleTable from "./SimpleTable";
 
@@ -22,7 +22,7 @@ class Posts extends Component {
 
     return (
       <div>
-        <PersistentDrawer title={title} content={content} />
+        <AppDrawer title={title} content={content} />
       </div>
     );
   }

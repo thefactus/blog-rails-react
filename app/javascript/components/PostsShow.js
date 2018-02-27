@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import PersistentDrawer from "./PersistentDrawer";
+import AppDrawer from "./AppDrawer";
 import Typography from "material-ui/Typography";
 import axios from "axios";
 
-class PostShow extends Component {
+class PostsShow extends Component {
   constructor(props) {
     super(props);
   }
@@ -43,10 +43,10 @@ class PostShow extends Component {
 
     return (
       <div>
-        <PersistentDrawer title={title} content={content} />
+        <AppDrawer title={title} content={content} />
       </div>
     );
   }
 }
 
-export default PostShow;
+export default PostsShow;

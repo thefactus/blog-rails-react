@@ -1,3 +1,6 @@
 class HomeController < ApplicationController
-  def index; end
+  def index
+    @posts = Post.all
+    @posts = PostSerializer.new(@posts).serialized_json
+  end
 end

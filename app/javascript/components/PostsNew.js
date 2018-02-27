@@ -5,6 +5,7 @@ import Grid from "material-ui/Grid";
 import Paper from "material-ui/Paper";
 import { withStyles } from "material-ui/styles";
 import PropTypes from "prop-types";
+import PostsForm from "./PostsForm";
 
 const styles = theme => ({
   root: {
@@ -30,7 +31,7 @@ class PostsNew extends Component {
       <Grid container spacing={24}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-            <Typography component="p">Teste</Typography>
+            <PostsForm authToken={this.props.authToken} />
           </Paper>
         </Grid>
       </Grid>

@@ -5,5 +5,10 @@ import ReactDOM from "react-dom";
 import PostsNew from "../../components/PostsNew";
 
 document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<PostsNew />, document.getElementById("posts_new"));
+  const authToken = document.getElementsByName("authenticity_token")[0].value;
+
+  ReactDOM.render(
+    <PostsNew authToken={authToken} />,
+    document.getElementById("posts_new")
+  );
 });

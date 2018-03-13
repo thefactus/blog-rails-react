@@ -3,4 +3,5 @@
 //= link_directory ../admin/posts .js
 //= link_directory ../admin/posts_show .js
 //= link_directory ../admin/posts_new .js
+//= link_directory ../home .js
 //= link_directory ../stylesheets .css

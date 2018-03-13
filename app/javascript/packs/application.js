@@ -15,5 +15,7 @@ import Home from "../components/Home";
 import Posts from "../components/Posts";
 
 document.addEventListener("DOMContentLoaded", () => {
+  const node = document.getElementById("posts_data");
+  const data = JSON.parse(node.getAttribute("data"));
   ReactDOM.render(<Home />, document.getElementById("home"));
 });

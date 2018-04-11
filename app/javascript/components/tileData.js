@@ -7,55 +7,38 @@ import SendIcon from "material-ui-icons/Send";
 import MailIcon from "material-ui-icons/Mail";
 import DeleteIcon from "material-ui-icons/Delete";
 import ReportIcon from "material-ui-icons/Report";
+import ExitToAppIcon from "material-ui-icons/ExitToApp";
 
 export const mailFolderListItems = (
   <div>
-    <ListItem button>
+    <ListItem button component="a" href="/">
       <ListItemIcon>
         <InboxIcon />
       </ListItemIcon>
-      <ListItemText primary="Inbox" />
+      <ListItemText primary="Blog" />
+    </ListItem>
+    <ListItem button component="a" href="/admin/posts">
+      <ListItemIcon>
+        <InboxIcon />
+      </ListItemIcon>
+      <ListItemText primary="Posts" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <StarIcon />
       </ListItemIcon>
-      <ListItemText primary="Starred" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <SendIcon />
-      </ListItemIcon>
-      <ListItemText primary="Send mail" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <DraftsIcon />
-      </ListItemIcon>
-      <ListItemText primary="Drafts" />
+      <ListItemText primary="Users" />
     </ListItem>
   </div>
 );
 
 export const otherMailFolderListItems = (
   <div>
-    <ListItem button>
+    <ListItem button component="a" data-method="delete" href="/users/sign_out">
       <ListItemIcon>
-        <MailIcon />
+        <ExitToAppIcon />
       </ListItemIcon>
-      <ListItemText primary="All mail" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <DeleteIcon />
-      </ListItemIcon>
-      <ListItemText primary="Trash" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ReportIcon />
-      </ListItemIcon>
-      <ListItemText primary="Spam" />
+      <ListItemText primary="Logout" />
     </ListItem>
   </div>
 );

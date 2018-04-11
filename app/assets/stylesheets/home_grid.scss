@@ -1,0 +1,55 @@
+.home-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* grid-template-rows: auto; */
+  grid-template-areas:
+    "s s s c c c c c c c c c"
+    "s s s c c c c c c c c c";
+  height: 100vh; /* fill the vertical */
+}
+
+.sidebar {
+  grid-area: s;
+  padding: 35px 35px 35px 35px;
+  background-color: #46529d;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 60% 20% 20%;
+  grid-template-areas:
+    "left-menu sidebar-title"
+    "author ."
+    "quotes quotes";
+
+  .fa {
+    color: #f1f4ff;
+  }
+
+  .title {
+    font-family: "Libre Baskerville", "georgia", serif;
+    grid-area: sidebar-title;
+    justify-self: end;
+    color: #f1f4ff;
+    font-size: 20px;
+  }
+
+  .author {
+    grid-area: author;
+    color: #ffe118;
+
+    .underline {
+      font-size: 40px;
+      margin-top: -30px;
+    }
+  }
+
+  .left-menu {
+    grid-area: left-menu;
+  }
+}
+
+.content {
+  grid-area: c;
+  position: relative;
+  background-color: #f1f4ff;
+  padding: 35px 70px 35px 70px;
+}

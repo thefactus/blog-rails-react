@@ -10,9 +10,11 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require home_grid
+ *= require home
+ *= require menu
  */
 
 body {
@@ -21,118 +23,4 @@ body {
 
 a {
   color: #46529d;
-}
-
-.home-wrapper {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  /* grid-template-rows: auto; */
-  grid-template-areas:
-    "s s s c c c c c c c c c"
-    "s s s c c c c c c c c c";
-  height: 100vh; /* fill the vertical */
-}
-
-.sidebar {
-  grid-area: s;
-  padding: 35px 35px 35px 35px;
-  background-color: #46529d;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 60% 20% 20%;
-  grid-template-areas:
-    "left-menu sidebar-title"
-    "author ."
-    "quotes quotes";
-
-  .fa {
-    color: #f1f4ff;
-  }
-
-  .title {
-    font-family: "Libre Baskerville", "georgia", serif;
-    grid-area: sidebar-title;
-    justify-self: end;
-    color: #f1f4ff;
-    font-size: 20px;
-  }
-
-  .author {
-    grid-area: author;
-    color: #ffe118;
-
-    .underline {
-      font-size: 40px;
-      margin-top: -30px;
-    }
-  }
-
-  .left-menu {
-    grid-area: left-menu;
-  }
-}
-
-.content {
-  grid-area: c;
-  position: relative;
-  background-color: #f1f4ff;
-  padding: 35px 70px 35px 70px;
-}
-
-.blog-post-title {
-  font-family: "Roboto", "georgia", serif;
-  font-size: 20px;
-  color: #46529d;
-}
-
-.blog-post-subtitle {
-  font-family: "Roboto", "georgia", serif;
-  color: #a1a6c7;
-  font-size: 11px;
-  margin-top: 3px;
-  margin-bottom: 15px;
-}
-
-.blog-post-description {
-  font-family: "Roboto", "georgia", serif;
-  font-size: 14px;
-  color: #a1a6c7;
-  margin-top: 10px;
-  text-align: justify;
-}
-
-.quotes {
-  grid-area: quotes;
-  font-family: "Libre Baskerville", "georgia", serif;
-  color: #f1f4ff;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.blog-author {
-}
-
-.header {
-  grid-area: header;
-}
-
-.footer {
-  grid-area: footer;
-}
-
-.title {
-  /* text-align: center;
-  font-family: "Pacifico", cursive;
-  font-size: 200%; */
-}
-
-.blog-post-list-item-title {
-  font-family: "Libre Baskerville", "georgia", serif;
-  font-size: 1.5em;
-  /* padding-bottom: 10px; */
-}
-
-.blog-post-list-item-subtitle {
-  font-family: "Libre Baskerville", "georgia", serif;
-  font-size: 0.9em;
 }

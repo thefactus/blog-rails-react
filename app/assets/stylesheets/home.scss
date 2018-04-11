@@ -1,3 +1,61 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.blog-post-title {
+  font-family: "Roboto", "georgia", serif;
+  font-size: 20px;
+  color: #46529d;
+}
+
+.blog-post-subtitle {
+  font-family: "Roboto", "georgia", serif;
+  color: #a1a6c7;
+  font-size: 11px;
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+
+.blog-post-description {
+  font-family: "Roboto", "georgia", serif;
+  font-size: 14px;
+  color: #a1a6c7;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.quotes {
+  grid-area: quotes;
+  font-family: "Libre Baskerville", "georgia", serif;
+  color: #f1f4ff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.blog-author {
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.title {
+  /* text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 200%; */
+}
+
+.blog-post-list-item-title {
+  font-family: "Libre Baskerville", "georgia", serif;
+  font-size: 1.5em;
+  /* padding-bottom: 10px; */
+}
+
+.blog-post-list-item-subtitle {
+  font-family: "Libre Baskerville", "georgia", serif;
+  font-size: 0.9em;
+}

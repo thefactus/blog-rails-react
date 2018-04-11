@@ -1,0 +1,114 @@
+@import "bootstrap";
+
+.sessions {
+  background-color: black;
+  // color: white;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* grid-template-rows: auto; */
+  grid-template-areas:
+    "sc sc sc sc sc sc sc sc sc sc sc sc"
+    "sc sc sc sc sc sc sc sc sc sc sc sc"
+    "sc sc sc sc sc sc sc sc sc sc sc sc"
+    "sc sc sc sc sc sc sc sc sc sc sc sc";
+  height: 100vh; /* fill the vertical */
+  align-items: center;
+  justify-items: center;
+}
+
+.sessions-content {
+  grid-area: sc;
+  position: relative;
+  // background-color: #f1f4ff;
+  padding: 35px 70px 35px 70px;
+}
+
+.sessions-window {
+  grid-area: sw;
+  position: relative;
+  background-color: #f1f4ff;
+}
+
+.login-card {
+  background-color: white;
+  width: 350px;
+  padding: 20px 20px 20px 20px;
+}
+
+textarea {
+  resize: none;
+}
+.form-label {
+  font-size: 12px;
+  color: #5e9bfc;
+  margin: 0;
+  display: block;
+  opacity: 1;
+  -webkit-transition: 0.333s ease top, 0.333s ease opacity;
+  transition: 0.333s ease top, 0.333s ease opacity;
+}
+.form-control {
+  border-radius: 0;
+  border-color: #ccc;
+  border-width: 0 0 2px 0;
+  border-style: none none solid none;
+  box-shadow: none;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #5e9bfc;
+}
+.js-hide-label {
+  opacity: 0;
+}
+.js-unhighlight-label {
+  color: #999;
+}
+.btn-start-order {
+  background: 0 0 #ffffff;
+  border: 1px solid #2f323a;
+  border-radius: 3px;
+  color: #2f323a;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: inherit;
+  margin: 30px 0;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  transition: all 0.25s ease 0s;
+}
+.btn-start-order:hover,
+.btn-start-order:active,
+.btn-start-order:focus {
+  border-color: #5e9bfc;
+  color: #5e9bfc;
+}
+
+/*flash*/
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-alert {
+  background-color: #ff5050;
+  border-color: #ff5050;
+  color: white;
+  text-align: left;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}

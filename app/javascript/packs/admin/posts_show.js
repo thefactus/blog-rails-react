@@ -11,7 +11,7 @@ import "stylesheets/application";
 
 import React from "react";
 import ReactDOM from "react-dom";
-import PostsShow from "../../components/PostsShow";
+import PostsShow from "../../components/admin/PostsShow";
 
 document.addEventListener("DOMContentLoaded", () => {
   const node = document.getElementById("post_data");

@@ -34,7 +34,12 @@ export const mailFolderListItems = (
 
 export const otherMailFolderListItems = (
   <div>
-    <ListItem button component="a" data-method="delete" href="/admin/users/sign_out">
+    <ListItem
+      button
+      component="a"
+      data-method="delete"
+      href="/admin/users/sign_out"
+    >
       <ListItemIcon>
         <ExitToAppIcon />
       </ListItemIcon>

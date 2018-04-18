@@ -4,6 +4,7 @@ import { withStyles } from "material-ui/styles";
 import MenuItem from "material-ui/Menu/MenuItem";
 import TextField from "material-ui/TextField";
 import Button from "material-ui/Button";
+import RichTextEditor from "react-rte";
 
 const styles = theme => ({
   container: {
@@ -17,19 +18,40 @@ const styles = theme => ({
   },
   menu: {
     width: 200
+  },
+  styleTest: {
+    width: "100%"
   }
 });
 
 class PostsForm extends React.Component {
+  static propTypes = {
+    onChange: PropTypes.func
+  };
+
   state = {
     title: "",
-    body: ""
+    body: "",
+    value: RichTextEditor.createEmptyValue()
   };
 
   handleChange = event => {
     const state = this.state;
     state[event.target.id] = event.target.value;
     this.setState(state);
+    console.log(state);
+  };
+
+  onChange = value => {
+    const state = this.state;
+    state["body"] = value.toString("html");
+    this.setState({ value });
+    if (this.props.onChange) {
+      // Send the changes up to the parent component as an HTML string.
+      // This is here to demonstrate using `.toString()` but in a real app it
+      // would be better to avoid generating a string on each change.
+      this.props.onChange(value.toString("html"));
+    }
   };
 
   render() {
@@ -57,18 +79,15 @@ class PostsForm extends React.Component {
           value={this.state.title}
           onChange={this.handleChange}
         />
-        <TextField
-          required
-          fullWidth
+        <input
+          type="hidden"
           name="post[body]"
           id="body"
           label="Body"
-          multiline
-          rows="4"
-          margin="normal"
           value={this.state.body}
           onChange={this.handleChange}
         />
+        <RichTextEditor value={this.state.value} onChange={this.onChange} />
         <Button
           type="submit"
           variant="raised"
